@@ -8,7 +8,15 @@ export default function UserInput() {
         duration: 10,
     });
 
-    
+    function handleChange(inputIdentifier, newValue){
+        setUserInput(prevUserInput => {
+            return {
+                ...prevUserInput,
+                [inputIdentifier] : newValue
+            };
+        });
+    }
+
     return <section>
         <div>
             <p>
