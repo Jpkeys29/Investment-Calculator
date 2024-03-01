@@ -17,13 +17,14 @@ export default function Results({input}) {
         <tbody>
             {resultsData.map(resultado => {
                 const totalInterest = resultado.valueEndOfYear - resultado.annualInvestment * resultado.year - initialInvestment;
+                const totalAmountInvested = resultado.valueEndOfYear - totalInterest;
                 return (
                     <tr key={resultado.year}>
                         <td>{resultado.year}</td>
                         <td>{resultado.valueEndOfYear}</td>
                         <td>{resultado.interest}</td>
                         <td>{totalInterest}</td>
-                        {/* <td>{resultado.}</td> */}
+                        <td>{totalAmountInvested}</td>
                     </tr>
                 ); 
             })}
