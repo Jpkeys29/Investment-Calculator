@@ -28,6 +28,7 @@ function handleChange(inputIdentifier, newValue){
       <Header />
       <UserInput userInput={userInput}
        onChange={handleChange}/>
+      {!inputIsValid && <p><mark>Please enter valid input data</mark></p>}
       {inputIsValid && <Results input={userInput}/>}
     </>
   )
