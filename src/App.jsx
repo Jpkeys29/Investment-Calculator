@@ -24,10 +24,12 @@ function handleChange(inputIdentifier, newValue){
   return (
     <>
       <Header />
-      <UserInput userInput={userInput} onChange={handleChange}/>
+      <UserInput userInput={userInput}
+       onChange={handleChange}/>
       <Results input={userInput}/>
     </>
   )
 }
 
 export default App
+
